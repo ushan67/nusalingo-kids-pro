@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NusaLingo Kids Pro - Belajar Bahasa Inggris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="screen-menu" class="screen active">
+        <div class="mascot-area animate__animated animate__bounceIn">🦊</div>
+        <h1 style="font-family: 'Fredoka One'; color: var(--primary); font-size: 2.2rem; margin: 0;">NusaLingo Kids</h1>
+        <p style="color: #666; margin-bottom: 30px;">Mau belajar apa hari ini?</p>
+        
+        <button class="menu-btn" onclick="startLevel('animals')">🐾 Hewan (Animals)</button>
+        <button class="menu-btn" style="background: var(--secondary); box-shadow: 0 8px 0 #00aea8;" onclick="startLevel('fruits')">🍎 Buah (Fruits)</button>
+        <button class="menu-btn" style="background: #fab1a0; box-shadow: 0 8px 0 #e17055;" onclick="startLevel('numbers')">🔢 Angka (Numbers)</button>
+    </div>
+
+    <div id="screen-game" class="screen">
+        <div class="top-bar">
+            <div class="stat-chip" id="chip-level">Lvl 1</div>
+            <div class="stat-chip" style="color: #e67e22;">⭐ <span id="score-val">0</span></div>
+            <button onclick="exitGame()" style="border:none; background:none; font-size:1.5rem; cursor:pointer;">❌</button>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-fill" id="progress-bar"></div>
+        </div>
+
+        <div class="question-card">
+            <div id="emoji-display" style="font-size: 5rem; margin-bottom: 10px;">❓</div>
+            <div class="word-en" id="word-display">APPLE</div>
+            <button onclick="speakCurrentWord()" style="background: var(--primary); color:white; border:none; padding:10px 20px; border-radius:15px; cursor:pointer;">🔊 Dengar</button>
+        </div>
+
+        <div class="answer-grid" id="answer-options">
+        </div>
+    </div>
+
+    <div id="screen-result" class="screen">
+        <div class="mascot-area">🎉</div>
+        <h2 id="result-title">Hebat!</h2>
+        <p>Kamu mendapat skor:</p>
+        <h1 id="result-score" style="font-size: 4rem; color: var(--primary); margin: 10px 0;">0</h1>
+        <button class="menu-btn" onclick="exitGame()">Main Lagi</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
